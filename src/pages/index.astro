@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import CardsInfo from '../vue/CardsInfo.vue';
+import PracticeInfo from '../vue/practiceInfo.vue';
+import ReceivedMail from '../vue/ReceivedMail.vue';
+import PracticeMail from '../vue/PracticeMail.vue';
+import Pokemons from '../apisVue/Pokemons.vue';
+import Simpsons from '../apisVue/Simpsons.vue';
+import Tickets from '../apisVue/Tickets.vue';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="mt-5">
+		<CardsInfo title="Información1" information='Primer Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia omnis quam earum iure vel' client:load/>
+		<CardsInfo title="Información2" information='Segundo Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia omnis quam earum iure vel' client:load/>
+		<CardsInfo title='Informacion3' information='Tercer Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia omnis quam earum iure vel' client:load/>
+	</div>
+
+
+	<div class="mt-5">
+		<PracticeInfo title="Texto 1" information='Primer Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia omnis quam earum iure vel' client:load ></PracticeInfo>
+		<PracticeInfo title="Texto 2" information="hola, gente bonita, como están, nada más quiero comprobar por qué se sale mi texto de la caja, gracias" client:load  ></PracticeInfo>
+		<PracticeInfo title="Texto 3" information="efectivamente era el lorem, bueno no, era lo que tenía dentro que decia texto como muchas o" client:load  ></PracticeInfo>
+	</div>
+
+
+	<section class="p-5 mt-10 max-w-96 w-full mx-auto bg-slate-300 max-h-[500px] h-full">
+		<ReceivedMail name="Correo 1" text="Texto del correo 1" date="Hace 1 hora" iconIndex={0} client:load>
+
+		</ReceivedMail>
+		<ReceivedMail name="Correo 2" text="Texto del correo 2" date="Hace 1 hora" iconIndex={1} client:load>
+
+		</ReceivedMail>
+		<ReceivedMail name="Correo 3" text="Texto del correo 3" date="Hace 2 horas" iconIndex={2} client:load>
+
+		</ReceivedMail>
+		<ReceivedMail name="Correo 4" text="Texto del correo " date="Ayer" iconIndex={3} client:load>
+
+		</ReceivedMail>
+	</section>
+
+
+	<div class="p-5 mt-10 max-w-96 w-full mx-auto bg-slate-300 max-h-[500px] h-full">
+		<PracticeMail correo='Correo 1' text='texto del correo 1' date='hace 2 horas' iconIndex={0} client:load></PracticeMail>
+		<PracticeMail correo='Correo 2' text='texto del correo 2' date='hace 2 horas' client:load ></PracticeMail>
+		<PracticeMail correo='Correo 2' text='texto del correo 3' date='hace 2 horas' client:load ></PracticeMail>
+
+
+		
+	</div>
+
+
+	<div>
+		<Pokemons client:load>
+
+		</Pokemons>
+	</div>
+
+	<div>
+		<Simpsons client:load></Simpsons>
+		
+	</div>
+
+	<div>
+		<Tickets client:load></Tickets>
+	</div>
+	
+	<h1>Holi</h1>
+</Layout>
+
